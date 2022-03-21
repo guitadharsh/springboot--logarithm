@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/liberation-sans" type="text/css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../../../views/core/emp_details/model/model.css">
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+         crossorigin="anonymous"
+         />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>STOCK-BOOK</title>
+      <link rel="stylesheet" th:href ="@{/css/styles/style.css}">
+   </head>
+   <body>
+      <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.jpg">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="../../../styles/style.css">
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/liberation-sans" type="text/css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../../../views/core/emp_details/model/model.css">
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+         crossorigin="anonymous"
+         />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <!-- linking css part --> <link rel="stylesheet" href="quotation_create.css">
+      <title>STOCK-BOOK</title>
+   </head>
+   <body >
+      <side-bar></side-bar>
+      <section class="home-section">
+         <nav class="navbar sticky-top navbar-light bg-light">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="#"><b>ALTERNATE POWER SUPPLIES</b></a>
+               <li class="nav-item dropdown d-flex " id="profile_dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                  Sagar
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <li><a class="dropdown-item" href="#">My profile</a></li>
+                     <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+               </li>
+            </div>
+         </nav>
+         <div class="emp_main_component" style="padding: 25px; ">
+         <div class="topnav" style="padding: 5px;" >
+            <a class="active" href="#id01" style="float: left;"><i class="fa-solid fa-list"></i>  Quotation List</a>
+            <button type="button" class="btn btn-danger top-btn"><i class="fa-solid fa-list"></i> Quotaion List</button>
+            <button type="button" class="btn btn-primary top-btn" id="myBtn">Terms & Conditions</button>
+            <!-- <a class="active" href="#id01" style="float: left;"><i class="fa-solid fa-list"></i>  Quotation List</a> -->
+         </div>
+         <br><br>
+         <div class="funny" style="background-color:#fff;  height: 40%; width: 100%; padding: 25px;">
+
+           
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div class="tables">
+                   <div class="table-left">
+                      <!-- catagories -->
+                      <table>
+                         <tr><th>All</th></tr>
+                         <tr><td>Warrenty</td></tr>
+                         <tr><td>Prices</td></tr>
+                         <tr><td>Wiring/Cabling</td></tr>
+                         <tr><td>Payment</td></tr>
+                         <tr><td>Delivery</td></tr>
+                         <tr><td>Scope of Work</td></tr>
+                         <tr><td>Validity</td></tr>
+                         <tr><td>AMC-General</td></tr>
+                         <tr><td>Service</td></tr>
+                         <tr><td>Parallelling Configuration</td></tr>
+                         <tr><td>Dispatch</td></tr>
+                         <tr><td>Installation</td></tr>
+                         <tr><td>AMC Exclusions(3 Phase) </td></tr>
+                      </table>
+                   </div>
+
+                   <div class="table-right">
+
+                     <table>
+                        <tr>
+                           <th>#</th>
+                           <th>Terms</th>
+                           <th>Action</th>
+                           <th>Count</th>
+                        </tr>
+
+                        <tr>
+                           <td>1.</td>
+                           <td>Prices- are as per above calculation & are inclusive of freight.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>2.</td>
+                           <td>Wiring/Cabling - to br executed by customer</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>3.</td>
+                           <td>Payment-50% advance along with P.O. Balance against delivery</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>4.</td>
+                           <td>Delivery 1-2 Weeks from the data of Receipt of Advance & Purchase Order</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>5.</td>
+                           <td>Validity - this offer is valid for 7 Days.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>6.</td>
+                           <td>Handling & Transportation till ground floor of UPS Site</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>7.</td>
+                           <td>Battery Long Cable Length is considered as 5mts between UPS & Battery Rack. Additional length will be charged extra.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>8.</td>
+                           <td>Warrenty - 2 Years as per manufacturer's policies</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>9.</td>
+                           <td>Warrenty -2 Years as per manufacturer's policies</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>10.</td>
+                           <td>Prices are as per above calculation</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>11.</td>
+                           <td>Freight will be extra on actuals.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>12.</td>
+                           <td>Extended warranty Pack will cover only the UPS & not the inbuilt Batteries.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>13.</td>
+                           <td>Service as per APC Policies.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>14.</td>
+                           <td>Extended Warranty Pack should be purchased within 2 months of the Purchase of UPS or along with the UPS.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>15.</td>
+                           <td>Activation of Extended Warranty Pack will be given after activation of the Pack.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>16.</td>
+                           <td>A Service Entitlement Certificate for the Extended Warranty Pack will be given after activation of the Pack.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>17.</td>
+                           <td>Payement - 100% advance along with Purchase Order.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>18.</td>
+                           <td>Delivery 3-4 Weeks from the date of Receipt of Advance & Purchase Order</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>19.</td>
+                           <td>Warrenty-1 Year as per manufacturer's policies.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+                        <tr>
+                           <td>20.</td>
+                           <td>Warrenty-2 years on UPS. 3 Years on Batteries.</td>
+                           <td><button class="btn-primary plus-btn">+</button></td>
+                           <td><input type="text" class="count-td"></td>
+                        </tr>
+
+
+                        
+                     </table>
+                   </div>
+                </div>
+      
+     
+            </div>
+            </div>
+            
+                        
+            <!-- Quotation Section -->
+                
+            <div class="quot">
+               <div class="quot-head">
+                  <h4>NEW QUOTATION</h4>
+               </div>
+
+               <!-- Form Part -->
+               <form action="">
+               <div class="form-sec">
+                  <div class="left">
+                     <label for="">Quotation No <span>*</span></label>
+                     <input type="text" class="box1" value="QUO/323/2021-22"><br>
+
+                     <label for="customer">Customer <span>*</span></label>
+                     <select name="customer" id="" class="box2">
+                        <option value="">Choose Customer</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                        <option value="d">d</option>
+                        <option value="e">e</option>
+                     </select><button class="plus-symb">+</button><br>
+
+                     <label for="">Document</label>
+                     <input type="file" class="box3">
+                  </div>
+
+                  <div class="right">
+                     <label for="">Quotation Date <span>*</span></label>
+                     <input type="text" class="box4"><br>
+
+                     <label for="">Total Amount <span>*</span></label>
+                     <input type="text" class="box5" id="total"><br>
+
+                     <label for="">Creating By <span>*</span></label>
+                     <input type="text" class="box6">
+                  </div>
+               </div>
+               <div class="note">
+               <label for="">Note</label>
+                  <textarea name="" id=""  placeholder="Note" class="box7"></textarea>
+               </div>
+            </form>
+            </div>
+
+        
+            <div class="form-row">
+               <div class="col-6">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;align-items: center;padding: 4px;justify-content: center;">Description</p>
+                  </div>
+                  <select name="customer" id="" class="quotation-box"><i fa fa-plus>+</i>
+                     <option value="">Description</option>
+                     <option value="a">a</option>
+                     <option value="b">b</option>
+                     <option value="c">c</option>
+                     <option value="d">d</option>
+                     <option value="e">e</option>
+                  </select><br>
+               </div>
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">HSN/SAC</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="HSN/SAC">
+               </div>
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Price</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Price" id="price">
+               </div>
+               <div class="col-2">
+                  <div   class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Qty</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Qty" id="qty">
+               </div>
+            </div><br>
+            <div class="form-row">
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Discount</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="State">
+               </div>
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Discount Amount</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Discount Amount">
+               </div>
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Tax</p>
+                  </div>
+               
+                  <select id="form_need" name="need"
+                  class="form-control" required="required"
+                  data-error="Please specify your need.">
+                  <option value="" selected disabled>0.0%
+                  </option>
+                  
+                  <option value="18">GST@ 18.0%</option>
+                  <option value="28">GST@ 28.0%</option>
+              </select>
+                  
+               </div>
+               <div class="col-2">
+                  <div   class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Tax Amount</p>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Tax Amount" id="tax">
+               </div>
+               <div class="col-2">
+                  <div   class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Sub Total</p>
+                  </div>
+                  <input type="text" class="form-control" id="subTotal">
+               </div>
+               <div class="col-2">
+                  <div  class="quoatation_create_button_color">
+                     <p class="quoatation_create_p_color" style="display: flex;text-align: center;padding: 4px;justify-content: center;">Action</p>
+                  </div>
+                  <input type="submit" value="+" style="background-color: #2e3f50;font-weight: bolder; color: #fff;" class="form-control">
+               </div>
+            </div>
+
+            <!-- Radio buttons -->
+            <!-- sample -->
+            <div class="box-radios">
+            <div class="box-radio1">
+            <div class="form-check">
+               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+               <label class="form-check-label" for="flexRadioDefault1">
+                 Canara Bank, Lashkar Mohalla
+               </label>
+            </div>
+             </div>
+
+             <div class="box-radio2">
+             <div class="form-check">
+               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+               <label class="form-check-label" for="flexRadioDefault2">
+                 Canara Bank, Saraswatipuram
+               </label>
+             </div>
+            </div>
+         </div>
+            <!-- Save and Reset buttons -->
+            
+            <button type="button" class="btn btn-light save-btn" onclick="multiply()">Save</button>
+            <button type="button reset" class="btn btn-light reset-btn">Reset</button>
+         
+               
+<!--                   
+                  <div class="form-row">
+                     <div class="col-md-2 mb-2">
+                        <div style="background-color: green;">
+                           <p style="display: flex;text-align: center;padding: 4px;justify-content: center;">hdbfbdsh</p>
+                        </div>
+                       
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+                     </div>
+                     <div class="col-md-2 mb-2">
+                        <label for="validationDefault02"></label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+                     </div>
+                     <div class="col-md-2 mb-2">
+                        <label for="validationDefault02"></label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+                     </div>
+                     <div class="col-md-2 mb-2">
+                        <label for="validationDefault02"></label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+                     </div>
+                     <div class="col-md-2 mb-2">
+                        <label for="validationDefault02"></label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+                     </div>
+                     <div class="col-md-3 mb-2">
+                        <button type="text" class="btn btn-primary" id="validationDefault02 " placeholder="Last name" value="Otto"  required>Save</button>
+                     </div>
+                  </div> -->
+         </form>
+           <!-- particulars section -->
+
+           <div class="part">
+            <div class="part-head">
+               <h4>PARTICULARS</h4>
+            </div>
+            <table class="table-bordered">
+               <tr>
+                  <th>Description</th>
+                  <th>Place</th>
+                  <th>Quantity</th>
+                  <th>Sub Total</th>
+                  <th>Action</th>
+               </tr>
+            </table>
+         </div>
+         </div>      
+      </section>
+
+ 
+
+      <script src="../../js/main.js "></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="../../../views/components/sidebar/sidebar.js"></script>
+      <script src="../../../views/components/head/head.js"></script>
+      <script src="../../js/main.js "></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="../../../views/component/sidebar/sidebar.js"></script>
+
+   </body>
+</html>
+      <script src="../.././component/sidebar/sidebar.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="../../../views/components/sidebar/sidebar.js"></script>
+      <script src="../../../views/components/head/head.js"></script>
+   </body>
+</html>
